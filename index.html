@@ -88,7 +88,7 @@
   <i class="fas fa-arrow-up"></i>
 </button>
 <!-- Navbar with Fullscreen Menu -->
-<nav class="navbar navbar-light shadow-sm fixed-top">
+<nav class="navbar navbar-light shadow-sm fixed-top" style="background-color: #00000087;">
   <div class="container-fluid justify-content-between">
     <a class="navbar-brand fw-bold" href="#">
       <img src="logo.png" alt="" style="width: 30%;">
@@ -212,7 +212,7 @@ function backToTop() {
 
 <!-- Header -->
 <div class="header-container" id="home"></div>
-<section class="py-5 header">
+<section class="py-5 header" style="background-color: #00000087;">
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-lg-6 mb-4 mb-lg-0">
@@ -262,7 +262,13 @@ function backToTop() {
 		</div>
 	</div>
 </section>
-<div class="curved-edge"></div>
+<div class="wave-top">
+  <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+    <path fill="#00000087" fill-opacity="1"
+      d="M0,160L40,170.7C80,181,160,203,240,213.3C320,224,400,224,480,224C560,224,640,224,720,213.3C800,203,880,181,960,160C1040,139,1120,117,1200,106.7C1280,96,1360,96,1400,96L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+    </path>
+  </svg>
+</div>
 
 
 <section class="about-section d-flex align-items-center justify-content-center">
@@ -322,15 +328,163 @@ function backToTop() {
     </path>
   </svg>
 </div>
-<div id="sky" style="z-index: 999;"></div>
+
+
+
+
+<section id="about" class="about-section2 d-flex align-items-center justify-content-center" style="background-color: #0000007a;">
+  <div class="container">
+    <div class="text-content text-white">
+      <h2 class="mb-4 display-1 text-white fw-bold text-center ">ICPS 2026 awaits you - Ahlan wa sahlan!</h2>
+
+      <p class="text-white initial-paragraph">
+        The International Conference of Physics Students (ICPS) 2026 brings together passionate physics students, researchers, and educators from around the world for a week of scientific exchange, cultural immersion, and collaborative exploration. Hosted in the historic and vibrant city of Rabat, Morocco, ICPS 2026 is more than a conference — it’s a celebration of the future of science, learning, and connection.
+      </p>
+
+      <div class="hidden-content text-white" style="display: none;">
+        <p>
+          <strong>TO RABAT - ICPS 2026</strong><br>
+          Experience a Fusion of Tradition and Innovation at the 40th International Conference of Physics Students (ICPS) in Rabat, Morocco — a Historic First in Africa.
+        </p>
+        <p>
+          In a region where centuries-old traditions harmoniously intertwine with cutting-edge scientific advancements, a new chapter in the global physics community is about to unfold. For the very first time in African history, the prestigious 40th International Conference of Physics Students will take place in Rabat, Morocco, in 2026. As the flagship event of the International Association of Physics Students (IAPS), this landmark gathering promises to be an inspiring convergence of ideas, cultures, and innovations.
+        </p>
+        <p>
+          Organized by a passionate team of physics students under the auspices of the National Committee (NC) Morocco, in collaboration with the esteemed Mohamed V University, ICPS 2026 aims to elevate Africa’s presence on the global scientific stage. Rabat, uniquely positioned between the Atlantic Ocean and lush Bouregreg Valley, provides an enchanting backdrop that seamlessly marries heritage with modernity. Recognized as one of Africa’s safest and most welcoming capitals, Rabat offers international visitors a seamless blend of ancient medinas, vibrant markets, and state-of-the-art research facilities.
+        </p>
+        <p>
+          The scientific program will be as dynamic and diverse as the city itself. Attendees can look forward to a rich lineup of keynote speeches, interactive panels, and hands-on tutorials led by prominent Moroccan and international physicists. From the mysteries of quantum mechanics to breakthroughs in renewable energy, the sessions will highlight Morocco's rapidly growing contributions to the global scientific landscape. Participants will have unparalleled opportunities to network with leading researchers from national institutions, universities, and innovation hubs, fostering collaborations that could shape the future of physics worldwide.
+        </p>
+        <p>
+          But ICPS 2026 is about more than just scientific exchange — it’s a cultural celebration. The event will feature immersive experiences that showcase Morocco’s vibrant heritage: from soulful Andalusian melodies and traditional Amazigh dances to mint tea ceremonies and flavorful couscous feasts. Attendees will explore iconic sites such as the magnificent Kasbah of the Udayas, stroll through the lush gardens of the Royal Palace, and marvel at Rabat’s distinctive Art Deco architecture, all while immersing themselves in UNESCO World Heritage treasures.
+        </p>
+        <p>
+          Explore beyond the conference with unforgettable excursions. Surf the Atlantic waves, embark on desert adventures in Merzouga, or enjoy star-studded nights in the majestic Atlas Mountains. Don’t miss Moroccan Night — a lively celebration where you can don traditional attire like djellabas or caftans, savor local music and cuisine, and dance under the starlit sky.
+        </p>
+        <p>
+          With its legendary warmth, rich cultural tapestry, and a thriving academic scene, Rabat stands ready to welcome the world's brightest physics students for an ICPS experience unlike any other. Prepare for inspiring discoveries, meaningful connections, and unforgettable memories in this historic African hub of science and culture.
+        </p>
+        <p>
+          TC MOROCCO
+        </p>
+      </div>
+
+      <button id="readMoreBtn" class="read-more-btn mt-3 bottom-0 end-0 ">
+        <span class="button-text">READ MORE</span>
+        <span class="button-icon-wrapper">
+          <svg class="button-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+                
+<style>
+/* READ MORE BUTTON STYLES - NEW */
+.read-more-btn {
+  display: inline-flex; /* Use flexbox to align text and icon */
+  align-items: center; /* Vertically center items */
+  gap: 15px; /* Space between text and icon */
+  padding: 12px 25px 12px 30px; /* Adjust padding as needed */
+  background-color: #ffffff; /* Dark background from the image */
+  color: #000000; /* White text */
+  border: none;
+  border-radius: 50px; /* Pill shape */
+  cursor: pointer;
+  font-weight: 600; /* Looks bold in the image */
+  text-transform: uppercase; /* All caps text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  margin-top: 20px; /* To separate from the text above */
+  -webkit-appearance: none; /* For consistent styling across browsers */
+  -moz-appearance: none;
+  appearance: none;
+
+}
+
+.read-more-btn:hover {
+  background-color: #000000; /* Slightly lighter on hover */
+  transform: translateY(-1px); /* Slight lift effect */
+  color: #ffffff;
+}
+
+.read-more-btn:active {
+  background-color: #000000; /* Darker on click */
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.button-text {
+  /* No specific styles needed here, inherits from parent */
+}
+
+.button-icon-wrapper {
+  display: flex; /* Centers the SVG inside the circle */
+  align-items: center;
+  justify-content: center;
+  width: 32px; /* Size of the circle */
+  height: 32px; /* Size of the circle */
+  background-color: #ffffff; /* White circle background */
+  border-radius: 50%; /* Make it a circle */
+  flex-shrink: 0; /* Prevent it from shrinking in flex container */
+}
+
+.button-arrow-icon {
+  width: 18px; /* Size of the arrow */
+  height: 18px; /* Size of the arrow */
+  stroke: #1a1a1a; /* Dark color for the arrow inside the white circle */
+  stroke-width: 2.5px; /* Adjust thickness if needed */
+}
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const readMoreBtn = document.getElementById('readMoreBtn');
+    const hiddenContent = document.querySelector('.hidden-content');
+    const buttonTextSpan = readMoreBtn.querySelector('.button-text'); // Get the span for text
+
+    readMoreBtn.addEventListener('click', function() {
+      if (hiddenContent.style.display === 'none') {
+        hiddenContent.style.display = 'block';
+        buttonTextSpan.textContent = 'READ LESS'; // Update text
+      } else {
+        hiddenContent.style.display = 'none';
+        buttonTextSpan.textContent = 'READ MORE'; // Update text
+      }
+    });
+  });
+</script>
+
+<div class="wave-top">
+  <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+    <path fill="#000" fill-opacity="1"
+      d="M0,160L40,170.7C80,181,160,203,240,213.3C320,224,400,224,480,224C560,224,640,224,720,213.3C800,203,880,181,960,160C1040,139,1120,117,1200,106.7C1280,96,1360,96,1400,96L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+    </path>
+  </svg>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Slide 3 
+<div style="z-index: 999;"></div>
 <section class=" py-3 py-md-5 py-xl-8" id="speakers" style="background-color: #000000;" >
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
         <h2 class="mb-4 display-5 text-center text-white">Meet Our Speakers</h2>
         <p class="text-white text-center">
-            Hear from world-renowned physicists and rising talents as they explore the future of physics with students from around the globe.
-        </p>
+TBD        </p>
         <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
       </div>
     </div>
@@ -392,7 +546,7 @@ function backToTop() {
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <style>
   .sponsor-logo {
@@ -404,13 +558,14 @@ function backToTop() {
 </style>
 
 
-
+  <!-- Slide 3 
 <section class="conference-schedule-section">
   <div class="schedule-container">
     <h2 class="mb-4 display-5 text-center text-uppercase text-white">Conference Schedule</h2>
+    
     <p class="text-white text-center">
-      Explore the day-by-day program of the International Conference of Physics Students 2026 in Rabat, Morocco. Details for each day's sessions, speakers, and events will be announced soon.
-    </p>
+TBD    </p>
+  
     <div class="schedule-accordion">
       <div class="accordion-event" id="event1">
         <a class="event-link" href="#event1">
@@ -495,7 +650,7 @@ function backToTop() {
     </div>
   </div>
 </section>
-
+-->
 
 <style>
 
@@ -633,7 +788,7 @@ html {
           </div>
         </div>
 
-        <!-- Slide 2 -->
+        <!-- Slide 2 
         <div class="carousel-item">
           <div class="row justify-content-center">
             <div class="col-6 col-md-3">
@@ -649,7 +804,7 @@ html {
               <img src="https://placehold.co/150x80/E0E0E0/333333?text=Partner+8" class="d-block w-100 sponsor-logo" alt="Partner Logo 8">
             </div>
           </div>
-        </div>
+        </div>-->
         <!-- Slide 3 -->
 
 
@@ -658,7 +813,7 @@ html {
               <p class="text-white text-center mt-4">
           Interested in becoming one of our Sponsors?
         </p>
-            <button href="" class="button" style="--clr: #000; --bg: #000; --txt: #fff;">
+        <button href="#footer" class="button" style="--clr: #000; --bg: #000; --txt: #fff;">
   <span class="button__icon-wrapper">
     <svg
       viewBox="0 0 14 15"
@@ -1004,7 +1159,7 @@ Arrive via Rabat-Salé Airport (RBA), just minutes from downtown, or Casablanca�
 
         
         <h1 class="display-6" >Questions ?</h1>
-        <p class="text-white small">Email: info@icps2026.org</p>
+        <p class="text-white small">Email: kadiri.abdelmajid@gmail.com</p>
       </div>
             <div class="col-lg-6 mb-4">
         <h2 class="display-5 fw-bold mb-3 text-white">Join ICPS 2026 Today!</h2>
