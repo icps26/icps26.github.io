@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ICPS 2026 – International Conference of Physics Students</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+
+  <style>
+
+    /* Hide default audio controls */
+    audio {
+      display: none;
+    }
+
+    /* Sticky button bottom right */
+    #muteBtn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      border: none;
+      border-radius: 50%;
+      padding: 16px;
+      font-size: 12px;
+      background-color: none;
+      color: white;
+      cursor: pointer;
+      z-index: 999;
+      transition: background-color 0.3s ease;
+    }
+
+    #muteBtn:hover {
+      background-color: #000000;
+      color: #ffffff;
+    }
+  </style>
+
+  <!-- Hidden audio player -->
+  <audio id="bgAudio" autoplay loop muted>
+    <source src="sound.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Sticky mute/unmute button -->
+  <button id="muteBtn"><i class="fas fa-volume-mute"></i></button>
+
+  <script>
+    const audio = document.getElementById("bgAudio");
+    const muteBtn = document.getElementById("muteBtn");
+    const icon = muteBtn.querySelector("i");
+
+    muteBtn.addEventListener("click", () => {
+      audio.muted = !audio.muted;
+      icon.classList.toggle("fa-volume-mute", audio.muted);
+      icon.classList.toggle("fa-volume-up", !audio.muted);
+    });
+  </script>
+
+  <!-- Back to top button -->
+<button
+        type="button"
+        class="btn btn-floating btn-lg" style="color: #fff;"
+        id="btn-back-to-top"
+        >
+  <i class="fas fa-arrow-up"></i>
+</button>
+<!-- Navbar with Fullscreen Menu -->
+<nav class="navbar navbar-light shadow-sm fixed-top">
+  <div class="container-fluid justify-content-between">
+    <a class="navbar-brand fw-bold" href="#">
+      <img src="logo.png" alt="" style="width: 30%;">
+    </a>
+    <button class="navbar-toggler" type="button" id="menu-toggle" aria-label="Toggle menu" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+<style>
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+/* Keyframes for fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+</style>
+
+  </div>
+</nav>
+
+<!-- Fullscreen Overlay Menu -->
+<div id="fullscreen-menu" class="fullscreen-menu">
+  <button class="close-btn" aria-label="Close menu">&times;</button>
+  <ul class="nav flex-column text-center">
+    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+    <li class="nav-item"><a class="nav-link" href="">Speakers</a></li>
+    <li class="nav-item"><a class="nav-link" href="">Registration</a></li>
+    <li class="nav-item"><a class="nav-link" href="#travel">Travel Info</a></li>
+    <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+    <li class="nav-item">
+      <button href="#" class="button" style="--clr: #000; --bg: #000; --txt: #fff;">
+  <span class="button__icon-wrapper">
+    <svg
+      viewBox="0 0 14 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="button__icon-svg"
+      width="10"
+    >
+      <path
+        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+        fill="currentColor"
+      ></path>
+    </svg>
+
+    <svg
+      viewBox="0 0 14 15"
+      fill="none"
+      width="10"
+      xmlns="http://www.w3.org/2000/svg"
+      class="button__icon-svg button__icon-svg--copy"
+    >
+      <path
+        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  </span>
+  Register
+</button>
+    </li>
+  </ul>
+</div>
+
+
+
+
+<style>
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 1000;
+}
+</style>
+
+<script>
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+
+
+
+
+
+<!-- Header -->
+<div class="header-container" id="home"></div>
+<section class="py-5 header">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-6 mb-4 mb-lg-0">
+				<h1 class="display-2 icps-heading fw-bold " style="color: #fff;">International Conference of Physics Students<span style="color: #D92C54;"> 2026 </span></h1>
+        
+        <!-- From Uiverse.io by Creatlydev --> 
+<button href="#" class="button" style="--clr: #000; --bg: #000; --txt: #fff;">
+  <span class="button__icon-wrapper">
+    <svg
+      viewBox="0 0 14 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="button__icon-svg"
+      width="10"
+    >
+      <path
+        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+        fill="currentColor"
+      ></path>
+    </svg>
+
+    <svg
+      viewBox="0 0 14 15"
+      fill="none"
+      width="10"
+      xmlns="http://www.w3.org/2000/svg"
+      class="button__icon-svg button__icon-svg--copy"
+    >
+      <path
+        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  </span>
+  Register
+</button>
+
+
+			</div>
+<div class="col-lg-6 text-white" dir="ltr" style="text-align: right;">
+  <p class="text-white">August 15, </p>
+  <p class="text-white">2026</p>
+  <p class="text-white">Mohammed V University,</p>
+  <p class="text-white">Rabat, Morocco</p>
+</div>
+
+		</div>
+	</div>
+</section>
+<div class="curved-edge"></div>
+
+
+<section class="about-section d-flex align-items-center justify-content-center">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<div class="text-center">
+					<h4>Your moment is here — join physics students from around the world, 
+            share your passion, present your ideas, and be part of the journey where science meets friendship and inspiration.
+          </h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+<div id="sky"></div>
+
+<main class="slanted-edge" style="background-color:  #000000;">
+
+
+<section  id="about" id="aboutSlider" class="about-section2 d-flex align-items-center justify-content-center" id="section1" style="background-color:  #8abb6c7a;">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Image Column -->
+      <div class="col-md-6 pt-5 text-center">
+        <div class="wrap">
+          <div class="circle">
+            <img src='img/about1.jpg' alt='Conference Image'>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text Column -->
+      <div class="col-md-6">
+        <div class="text-content text-white " >
+              <h2 class="mb-4 display-5 text-white">About ICPS 2026</h2>
+        <p class="text-white">
+            The International Conference of Physics Students (ICPS) 2026 brings together passionate physics students, researchers, and educators from around the world for a week of scientific exchange, cultural immersion, and collaborative exploration. Hosted in the historic and vibrant city of Rabat, Morocco, ICPS 2026 is more than a conference — it’s a celebration of the future of science, learning, and connection.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<div class="wave-top">
+  <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+    <path fill="#8abb6c7a" fill-opacity="1"
+      d="M0,160L40,170.7C80,181,160,203,240,213.3C320,224,400,224,480,224C560,224,640,224,720,213.3C800,203,880,181,960,160C1040,139,1120,117,1200,106.7C1280,96,1360,96,1400,96L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+    </path>
+  </svg>
+</div>
+<div id="sky" style="z-index: 999;"></div>
+<section class=" py-3 py-md-5 py-xl-8" id="speakers" style="background-color: #000000;" >
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+        <h2 class="mb-4 display-5 text-center text-white">Meet Our Speakers</h2>
+        <p class="text-white text-center">
+            Hear from world-renowned physicists and rising talents as they explore the future of physics with students from around the globe.
+        </p>
+        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+      </div>
+    </div>
+  </div>
+
+  <div class="container overflow-hidden">
+    <div class="row gy-4 gy-lg-0 gx-xxl-5">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img class="img-fluid" loading="lazy" src="img/Aithaddou.jpg" alt="Flora Nyra">
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Flora Nyra</h4>
+                <p class="text-secondary mb-0">Product Manager</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img class="img-fluid" loading="lazy" src="img/Aithaddou.jpg" alt="Evander Mac">
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Evander Mac</h4>
+                <p class="text-secondary mb-0">Art Director</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img class="img-fluid" loading="lazy" src="img/Aithaddou.jpg" alt="Taytum Elia">
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Taytum Elia</h4>
+                <p class="text-secondary mb-0">Investment Planner</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img class="img-fluid" loading="lazy" src="img/Aithaddou.jpg" alt="Wylder Elio">
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Wylder Elio</h4>
+                <p class="text-secondary mb-0">Financial Analyst</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sponsor-logo {
+  max-height: 100px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+</style>
+
+
+
+<section class="conference-schedule-section">
+  <div class="schedule-container">
+    <h2 class="mb-4 display-5 text-center text-uppercase text-white">Conference Schedule</h2>
+    <p class="text-white text-center">
+      Explore the day-by-day program of the International Conference of Physics Students 2026 in Rabat, Morocco. Details for each day's sessions, speakers, and events will be announced soon.
+    </p>
+    <div class="schedule-accordion">
+      <div class="accordion-event" id="event1">
+        <a class="event-link" href="#event1">
+          <div class="event-header-flex">
+            <h3 class="mb-4 display-6 text-center text-white">DAY 1: OPENING & KEYNOTES</h3>
+            <ul class="event-tags">
+              <li>#Registration</li>
+              <li>#OpeningCeremony</li>
+              <li>#PlenarySession</li>
+              <li>#Networking</li>
+              <li>#WelcomeReception</li>
+            </ul>
+          </div>
+          <i class="icon ion-md-arrow-forward"></i>
+          <i class="icon ion-md-arrow-down"></i>
+        </a>
+        <div class="event-details">
+          <p>TBD: Detailed schedule for Day 1, including registration times, opening remarks, and keynote speaker presentations, will be announced closer to the conference date.</p>
+        </div>
+        <hr class="event-divider">
+      </div>
+      <div class="accordion-event" id="event2">
+        <a class="event-link" href="#event2">
+          <div class="event-header-flex">
+            <h3 class="mb-4 display-6 text-center text-white">DAY 2: PARALLEL SESSIONS & POSTERS</h3>
+            <ul class="event-tags">
+              <li>#OralPresentations</li>
+              <li>#PosterSession</li>
+              <li>#Workshops</li>
+              <li>#ResearchFocus</li>
+              <li>#StudentPresentations</li>
+            </ul>
+          </div>
+          <i class="icon ion-md-arrow-forward"></i>
+          <i class="icon ion-md-arrow-down"></i>
+        </a>
+        <div class="event-details">
+          <p>TBD: Detailed schedule for Day 2, including parallel scientific sessions, poster presentations, and interactive workshops, will be announced closer to the conference date.</p>
+        </div>
+        <hr class="event-divider">
+      </div>
+      <div class="accordion-event" id="event3">
+        <a class="event-link" href="#event3">
+          <div class="event-header-flex">
+            <h3 class="mb-4 display-6 text-center text-white">DAY 3: PLENARY LECTURES & EXCURSION</h3>
+            <ul class="event-tags">
+              <li>#DistinguishedSpeakers</li>
+              <li>#CulturalVisit</li>
+              <li>#ScientificTours</li>
+              <li>#RabatExploration</li>
+              <li>#SocialEvent</li>
+            </ul>
+          </div>
+          <i class="icon ion-md-arrow-forward"></i>
+          <i class="icon ion-md-arrow-down"></i>
+        </a>
+        <div class="event-details">
+          <p>TBD: Detailed schedule for Day 3, featuring more plenary lectures and an exciting excursion to explore the cultural and scientific highlights of Rabat and its surroundings, will be announced closer to the conference date.</p>
+        </div>
+        <hr class="event-divider">
+      </div>
+      <div class="accordion-event" id="event4">
+        <a class="event-link" href="#event4">
+          <div class="event-header-flex">
+            <h3 class="mb-4 display-6 text-center text-white">DAY 4: CLOSING & AWARDS</h3>
+            <ul class="event-tags">
+              <li>#WrapUp</li>
+              <li>#AwardsCeremony</li>
+              <li>#FuturePlans</li>
+              <li>#Farewell</li>
+              <li>#Departure</li>
+            </ul>
+          </div>
+          <i class="icon ion-md-arrow-forward"></i>
+          <i class="icon ion-md-arrow-down"></i>
+        </a>
+        <div class="event-details">
+          <p>TBD: Detailed schedule for Day 4, including concluding remarks, awards ceremony for best presentations, and information regarding departure, will be announced closer to the conference date.</p>
+        </div>
+        <hr class="event-divider">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+
+
+html {
+  scroll-behavior: smooth; /* Add this line */
+}
+
+/*Section used for centering process*/
+.conference-schedule-section {
+  width: 100%;
+  height: auto;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedule-container {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.schedule-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordion-event {
+  background-color: #000000;
+  border-radius: .4rem;
+}
+
+.event-divider {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.event-link {
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, .8);
+  text-decoration: none;
+  background-color: #000000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.event-link h3 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.event-link i {
+  color: #e7d5ff;
+  padding: .5rem;
+}
+
+.event-tags {
+  display: flex;
+  align-items: flex-end;
+  list-style-type: none;
+}
+
+.event-tags li {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0 0 1px 5px;
+}
+
+.event-header-flex {
+  display: flex;
+}
+
+.event-link .ion-md-arrow-down {
+  display: none;
+}
+
+.event-details {
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+}
+
+.event-details p {
+  color: #fff;
+  font-size: 15px;
+  padding: 2rem;
+}
+
+.accordion-event:target .event-details {
+  max-height: 20rem;
+}
+
+.accordion-event:target .event-link .ion-md-arrow-forward {
+  display: none;
+}
+
+.accordion-event:target .event-link .ion-md-arrow-down {
+  display: block;
+}
+</style>
+
+
+
+<!-- Sponsors and Partners Section (Carousel Version) -->
+<section id="sponsors" class="py-5" style="background-color: #000000;" >
+  <div class="container text-center">
+    <h2 class="mb-4 display-5 text-center text-white">Our Valued Sponsors & Partners</h2>
+        <p class="text-white text-center">A huge THANK YOU to our incredible sponsors + partners who are dedicated to supporting us. We truly appreciate your generosity for this year's 2026 ICPS Conference.</p>
+
+    <div id="sponsorCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-6 col-md-3">
+              <img src="logos/iaps.png" class="d-block w-100 sponsor-logo" alt="Sponsor Logo 1">
+            </div>
+
+            <div class="col-6 col-md-3">
+              <img src="logos/map.png" class="d-block w-100 sponsor-logo" alt="Sponsor Logo 1">
+            </div>
+            <div class="col-6 col-md-3">
+              <img src="logos/m5.png" class="d-block w-100 sponsor-logo" alt="Partner Logo 2">
+            </div>
+            <div class="col-6 col-md-3 d-none d-md-block">
+              <img src="logos/iupap.png" class="d-block w-100 sponsor-logo" alt="Sponsor Logo 3">
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-6 col-md-3">
+              <img src="https://placehold.co/150x80/E0E0E0/333333?text=Sponsor+5" class="d-block w-100 sponsor-logo" alt="Sponsor Logo 5">
+            </div>
+            <div class="col-6 col-md-3">
+              <img src="https://placehold.co/150x80/E0E0E0/333333?text=Partner+6" class="d-block w-100 sponsor-logo" alt="Partner Logo 6">
+            </div>
+            <div class="col-6 col-md-3 d-none d-md-block">
+              <img src="https://placehold.co/150x80/E0E0E0/333333?text=Sponsor+7" class="d-block w-100 sponsor-logo" alt="Sponsor Logo 7">
+            </div>
+            <div class="col-6 col-md-3 d-none d-lg-block">
+              <img src="https://placehold.co/150x80/E0E0E0/333333?text=Partner+8" class="d-block w-100 sponsor-logo" alt="Partner Logo 8">
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+
+
+
+      </div>
+              <p class="text-white text-center mt-4">
+          Interested in becoming one of our Sponsors?
+        </p>
+            <button href="" class="button" style="--clr: #000; --bg: #000; --txt: #fff;">
+  <span class="button__icon-wrapper">
+    <svg
+      viewBox="0 0 14 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="button__icon-svg"
+      width="10"
+    >
+      <path
+        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+        fill="currentColor"
+      ></path>
+    </svg>
+
+    <svg
+      viewBox="0 0 14 15"
+      fill="none"
+      width="10"
+      xmlns="http://www.w3.org/2000/svg"
+      class="button__icon-svg button__icon-svg--copy"
+    >
+      <path
+        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  </span>
+  Contact Us
+</button>
+
+      <!-- Carousel Controls -->
+<!-- Carousel Controls -->
+<button class="carousel-control-prev" type="button" data-bs-target="#sponsorCarousel" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#sponsorCarousel" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+
+    </div>
+  </div>
+</section>
+
+<div class="wave-bottom">
+  <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+    <path fill="rgba(217, 44, 84, 0.409)" fill-opacity="1"
+      d="M0,160L40,170.7C80,181,160,203,240,213.3C320,224,400,224,480,224C560,224,640,224,720,213.3C800,203,880,181,960,160C1040,139,1120,117,1200,106.7C1280,96,1360,96,1400,96L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+    </path>
+  </svg>
+</div>
+<!-- Venue Section (Added this ID for GSAP animation target) -->
+<section id="travel" class="about-section2 d-flex align-items-center justify-content-center" id="section1" style="background-color: rgba(217, 44, 84, 0.409); margin-top: 0; padding-top: 0;">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Image Column -->
+      <div class="col-md-6">
+        <h2 class="mb-4 display-5 text-white">Venue</h2>
+        <p class="text-white">
+ICPS 2026 in Rabat, Morocco’s capital, offers a unique cultural journey where tradition meets modernity. Participants will explore the city’s vibrant medinas, historic landmarks, and coastal charm, while experiencing Moroccan hospitality, cuisine, music, and art. From guided tours of Rabat’s UNESCO World Heritage Sites to evenings filled with local flavors and performances, the week promises a rich immersion into Morocco’s diverse cultural heritage.The conference will be held at Mohammed V University, a prestigious institution located in the heart of Rabat. The venue offers state-of-the-art facilities, beautiful gardens, and a vibrant academic atmosphere, making it the perfect backdrop for this international gathering of physics students.
+          </p>
+      </div>
+      <!-- Text Column -->
+      <div class="col-md-6 text-center">
+        <div class="text-white">
+          <div class="wrap">
+          <div class="circle">
+            <img id="auto-image" src="img/rabat1.jpg" alt="Conference Image" style="width: 100%; height: 100%; object-fit: cover;">
+
+<script>
+  // Array of image paths
+  const images = [
+    "img/rabat1.jpg",
+    "img/Kasbah1.jpg",
+    "img/mausoleum1.jpg",
+    "img/medina2.jpg",
+    "img/hassan1.jpg",
+    "img/Kasbah2.jpg",
+    "img/rabat2.jpg",
+  ];
+
+  let index = 0;
+  const imgElement = document.getElementById("auto-image");
+
+  // Change image every 4 seconds
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    imgElement.src = images[index];
+  }, 900);
+</script>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-4" >
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <h2 class="mb-4 display-5 text-center text-white">Travel Info</h2>
+        <p class="text-white text-center">
+          Essential details to help you prepare for ICPS 2026 in Rabat.
+        </p>
+      </div>
+    </div>
+  </div>
+<section class="text-white">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">Getting to Rabat</h6>
+          <p class="text-white">
+            
+Arrive via Rabat-Salé Airport (RBA), just minutes from downtown, or Casablanca’s Mohammed V Airport (CMN), about an hour by train. Shuttles and taxis available.
+          
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Visa Requirements
+          </h6>
+          <p class="text-white">
+            Many nationalities can enter Morocco visa-free for up to 90 days. Check requirements early and request an invitation letter if needed.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Accommodation
+          </h6>
+          <p class="text-white">
+            Options from conference hotels, budget hostels, to traditional riads. Book early to secure your stay.
+          </p>
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Currency & Payments</h6>
+          <p class="text-white">Moroccan Dirham (MAD) is the currency. ATMs are common; cards accepted widely, but keep cash handy for small expenses.</p>
+          
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-8 text-center">
+      <p class="text-white small fst-italic">
+        We look forward to welcoming you to Rabat for an unforgettable conference experience! Contact us for further assistance.
+      </p>
+    </div>
+  </div>
+</div>
+  </div>
+  
+
+</section>
+
+
+
+<section class="section-split d-flex align-items-center">
+    <div class="text-col col-lg-4 col-md-12">
+        <div>
+          <h2 class="mb-4 display-5 text-white">Local Organizing Committee</h2>
+            <div class="member">
+                <img class="member-img" src="img/kadiri.jpg" alt="Abdelmajid Kadiri" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="img/kadiri.jpg">Abdelmajid Kadiri</h3>
+            </div>
+            <p class="text-white">Head of the OC, PhD Student<br>Sultane Moulay Slimane University</p>
+            <p class="text-white">Email: <a href="mailto:kadiri.abdelmajid@gmail.com">kadiri.abdelmajid@gmail.com</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/Bahlaoui.jpeg" alt="Mehdi Bahlaoui" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="img/Bahlaoui2.jpeg">Mehdi Bahlaoui</h3>
+            </div>
+            <p class="text-white">Finances & Sponsors, Engineering student<br>Mohamed V University</p>
+            <p class="text-white">Email: <a href="mailto:mehdibahlaoui3@gmail.com">mehdibahlaoui3@gmail.com</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/Aithaddou.jpg" alt="Marwan Ait Haddou" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="img/marwan.jpg">Marwan Ait Haddou</h3>
+            </div>
+            <p class="text-white">IT, PhD Student<br>Hassan II University</p>
+            <p class="text-white">Email: <a href="mailto:marwan.aithaddou@edu.uca.ac.ma">marwan.aithaddou@edu.uca.ac.ma</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/team-1.jpg" alt="AIT OUFAKIR Mohamed" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="https://via.placeholder.com/600x800?text=AIT+OUFAKIR+Mohamed">AIT OUFAKIR Mohamed</h3>
+            </div>
+            <p class="text-white">IT, PhD student<br>Mohamed V University</p>
+            <p class="text-white">Email: <a href="mailto:nasir.boubekraoui@edu.umi.ac.ma">nasir.boubekraoui@edu.umi.ac.ma</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/team-1.jpg" alt="Boubekraoui Nasir" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="https://via.placeholder.com/600x800?text=Boubekraoui+Nasir">Boubekraoui Nasir</h3>
+            </div>
+            <p class="text-white">Scientific activities, PhD student<br>UM6P</p>
+            <p class="text-white">Email: <a href="mailto:moufakirmohemad@gmail.com">moufakirmohemad@gmail.com</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/team-1.jpg" alt="Aya Alaoui Harrouni" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="https://via.placeholder.com/600x800?text=Aya+Alaoui+Harrouni">Aya Alaoui Harrouni</h3>
+            </div>
+            <p class="text-white">PR, Engineering student<br>Mohamed V University</p>
+            <p class="text-white">Email: <a href="mailto:ayaalaouiharrouni@gmail.com">ayaalaouiharrouni@gmail.com</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/team-1.jpg" alt="CHARKAOUI Halima" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="https://via.placeholder.com/600x800?text=CHARKAOUI+Halima">CHARKAOUI Halima</h3>
+            </div>
+            <p class="text-white">Social activities/excursions, PhD student<br>Ibn Zohr University</p>
+            <p class="text-white">Email: <a href="mailto:charkaouihalimapro@gmail.com">charkaouihalimapro@gmail.com</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/Moulane.jpeg" alt="Youssef Moulane" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="img/moulane2.jpg">Youssef Moulane</h3>
+            </div>
+            <p class="text-white">Member of advisory board, Scientist<br>UM6P</p>
+            <p class="text-white">Email: <a href="mailto:moulaneyoussef@gmail.com">moulaneyoussef@gmail.com</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/Khossossi.jpeg" alt="Nabil Khossossi" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="img/Khossossi.jpeg">Nabil Khossossi</h3>
+            </div>
+            <p class="text-white">Member of advisory board, Scientist<br>DIFFER, Eindhoven</p>
+            <p class="text-white">Email: <a href="mailto:N.Khossossi@tudelft.nl">N.Khossossi@tudelft.nl</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/anouar.jpg" alt="Anouar Riad Solh" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="img/anouar.jpg">Anouar Riad Solh</h3>
+            </div>
+            <p class="text-white">Member of advisory board, Professor<br>Mohamed V University</p>
+            <p class="text-white">Email: <a href="mailto:a.riadsolh@um5r.ac.ma">a.riadsolh@um5r.ac.ma</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/Lakhal.png" alt="Marwan Lakhal" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="img/Lakhal.png">Marwan Lakhal</h3>
+            </div>
+            <p class="text-white">Member of advisory board, Professor<br>Ibn Zohr University</p>
+            <p class="text-white">Email: <a href="mailto:akhal.marwan@gmail.com">akhal.marwan@gmail.com</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/MAALAM.jpeg" alt="Khadija El Maalam" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="img/maalam.jpg">Khadija El Maalam</h3>
+            </div>
+            <p class="text-white">Member of advisory board, Research Supervisor<br>UM6P</p>
+            <p class="text-white">Email: <a href="mailto:khadija.elmaalam@um6p.ma">khadija.elmaalam@um6p.ma</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/Jebari.png" alt="Houda Jebari" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="img/Jebari.png">Houda Jebari</h3>
+            </div>
+            <p class="text-white">Member of advisory board, PostDoc Researcher<br>UM6P</p>
+            <p class="text-white">Email: <a href="mailto:houdajebari09@gmail.com">houdajebari09@gmail.com</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/Laassiri.jpg" alt="Mounia Laassiri" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="img/Laassiri.jpg">Mounia Laassiri</h3>
+            </div>
+            <p class="text-white">Member of advisory board, Post Doctoral Researcher<br>Brookhaven National Laboratory, US</p>
+            <p class="text-white">Email: <a href="mailto:mounia.laassiri@gmail.com">mounia.laassiri@gmail.com</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/team-1.jpg" alt="Abdelbari Redouane" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="https://via.placeholder.com/600x800?text=Abdelbari+Redouane">Abdelbari Redouane</h3>
+            </div>
+            <p class="text-white">Member of advisory board, Professor<br>National Higher School of Mines of Rabat</p>
+            <p class="text-white">Email: <a href="mailto:Redouane@enim.ac.ma">Redouane@enim.ac.ma</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/OUDANI.jpeg" alt="Mustapha Oudani" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="img/OUDANI.jpeg">Mustapha Oudani</h3>
+            </div>
+            <p class="text-white">Member of advisory board, Professor<br>International University of Rabat</p>
+            <p class="text-white">Email: <a href="mailto:mustapha.oudani@uir.ac.ma">mustapha.oudani@uir.ac.ma</a></p>
+            <hr>
+
+            <div class="member">
+                <img class="member-img" src="img/harraki.jpeg" alt="Imad El Harraki" />
+                <h3 class="member-name hover-name mb-0 display-6 text-white" data-image="img/harraki.jpeg">Imad El Harraki</h3>
+            </div>
+            <p class="text-white">Member of advisory board, Professor<br>National Higher School of Mines of Rabat</p>
+            <p class="text-white">Email: <a href="mailto:Elharraki@enim.ac.ma">Elharraki@enim.ac.ma</a></p>
+            <hr>
+
+        </div>
+    </div>
+
+    <div class="image-col col-lg-8 col-md-12">
+        <img id="committee-image" src="img/loc.webp" alt="loc" class="img-fluid grayscale-img" />
+    </div>
+</section>
+<!-- Modern Footer / Contact -->
+
+
+<footer class="footer text-white pt-5" id="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Contact Form -->
+
+      <!-- Info -->
+      <div class="col-lg-6 d-flex flex-column justify-content-center">
+
+        <img src="logo.png" style="width: 20%;" alt="" class="justify-content-center mb-3">
+        <h4 class="display-6 mb-3">ICPS 2026 – Rabat, Morocco</h4>
+        <br>
+        <a href="#about" class="display-6 text-secondary ">About</a>
+        <a href="#speakers" class="display-6 text-secondary ">Speakers</a>
+        <a href="#travel" class="display-6 text-secondary ">Travel</a>
+
+        
+        <h1 class="display-6" >Questions ?</h1>
+        <p class="text-white small">Email: info@icps2026.org</p>
+      </div>
+            <div class="col-lg-6 mb-4">
+        <h2 class="display-5 fw-bold mb-3 text-white">Join ICPS 2026 Today!</h2>
+    <p class="lead mb-4 text-white">Be part of the future of physics — connect, learn, and inspire at Rabat’s biggest student physics conference.</p>
+    <button href="#" class="button" style="--clr: #000; --bg: #000; --txt: #fff;">
+  <span class="button__icon-wrapper">
+    <svg
+      viewBox="0 0 14 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="button__icon-svg"
+      width="10"
+    >
+      <path
+        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+        fill="currentColor"
+      ></path>
+    </svg>
+
+    <svg
+      viewBox="0 0 14 15"
+      fill="none"
+      width="10"
+      xmlns="http://www.w3.org/2000/svg"
+      class="button__icon-svg button__icon-svg--copy"
+    >
+      <path
+        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  </span>
+  Register
+</button>
+
+
+      </div>
+    </div>
+    <hr class="border-secondary mt-5" />
+    <div class="text-center pb-3">
+      <small>&copy; 2026 ICPS. All Rights Reserved. Designed with &#10084; in Rabat.</small>
+    </div>
+  </div>
+</footer>
+
+</main>
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+
+<style>
+  .footer {
+    background: #000000;
+  }
+
+  .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .form-control:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+  }
+</style>
+
+</body>
+</html>
